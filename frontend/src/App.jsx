@@ -3,6 +3,8 @@ import { useState } from 'react'
 function App() {
   const [ideaTitle, setIdeaTitle] = useState('')
   const [ideas, setIdeas] = useState([])
+  const appName = import.meta.env.VITE_APP_NAME
+  const apiUrl = import.meta.env.VITE_API_URL
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -23,8 +25,8 @@ function App() {
   return (
     <main className="app">
       <section className="panel">
-        <h1>Feedback Hub</h1>
-
+        <h1>{appName} </h1>
+        <p>{apiUrl}</p>
         <form className="idea-form" onSubmit={handleSubmit}>
           <label htmlFor="idea-title">Idea title</label>
           <div className="form-row">
