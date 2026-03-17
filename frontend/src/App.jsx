@@ -25,7 +25,7 @@ function App() {
   return (
     <main className="app">
       <section className="panel">
-        <h1>{appName} </h1>
+        <h1>{appName}</h1>
         <p>{apiUrl}</p>
         <form className="idea-form" onSubmit={handleSubmit}>
           <label htmlFor="idea-title">Idea title</label>
